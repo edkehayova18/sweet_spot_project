@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include "presentationFunctions.h"
+#include "dataFunctions.h"
 using namespace std;
 
 void spaces(int n)
@@ -207,7 +208,7 @@ void displayAdminOptions()
     spaces(37); cout << "|___________________________________________|" << endl;
 
     cout << endl;
-
+    STUDENT user;
     int choice;
     cout << "Enter an option: ";
     choice = readInt();
@@ -237,7 +238,7 @@ void displayAdminOptions()
     case 2:
         //1) Show all students 
         //2) Show students by classes
-        //3) Add student
+        newStudent(user);
         //4) Remove student
         //5) Return to my profile
         //6) Exit
