@@ -151,10 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dataFunctions.cpp" />
+    <ClCompile Include="presentationFunctions.cpp" />
     <ClCompile Include="sweet_spot_project.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dataFunctions.h" />
     <ClInclude Include="dataTypes.h" />
+    <ClInclude Include="presentationFunctions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

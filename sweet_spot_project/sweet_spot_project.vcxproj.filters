@@ -18,9 +18,21 @@
     <ClCompile Include="sweet_spot_project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="presentationFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dataFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dataTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="presentationFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dataFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
