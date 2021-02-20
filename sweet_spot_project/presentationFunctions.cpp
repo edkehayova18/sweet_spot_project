@@ -96,7 +96,7 @@ void displayTeacherOptions()
 
     case 2:
 
-        //1) Show all students 
+        showStudents(inFile, students);
         //2) Show students by classes
         //4) Return to my profile
         //5) Exit
@@ -207,7 +207,6 @@ void displayAdminOptions()
     spaces(37); cout << "|___________________________________________|" << endl;
 
     cout << endl;
-    STUDENT user;
     int choice;
     cout << "Enter an option: ";
     choice = readInt();
@@ -235,18 +234,18 @@ void displayAdminOptions()
         break;
 
     case 2:
-        //1) Show all students 
+        showStudents(inFile, students);
         //2) Show students by classes
-        newStudent(user,);
+        newStudent(users, inFile, students);
         //4) Remove student
         //5) Return to my profile
         //6) Exit
         break;
     case 3:
         //SAME FOR TEACHERS
-        //1) Show all students 
+        showStudents(inFile, students);
         //2) Show students by classes
-        newStudent(user);
+        newStudent(users, inFile, students);
         //4) Remove student
         //5) Return to my profile
         //6) Exit

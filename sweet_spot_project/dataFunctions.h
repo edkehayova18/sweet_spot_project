@@ -12,11 +12,12 @@
 #include "dataTypes.h"
 using namespace std;
 
-void newStudent(STUDENT user, fstream& inFile);
+void newStudent(STUDENT user, fstream& inFile, vector<STUDENT>& students);
 
 void saveFiles(vector<STUDENT>& students, fstream& studentSaveFile);
 
 void openSave(vector<STUDENT>& students, fstream& studentSaveFile);
 
+void showStudents(fstream& inFile, vector<STUDENT>& students);
 
 

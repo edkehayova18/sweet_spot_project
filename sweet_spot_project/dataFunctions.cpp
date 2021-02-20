@@ -57,5 +57,30 @@ void openSave(vector<STUDENT>& students, fstream& studentSaveFile)
     cout << endl;
 }
 
+void showStudents(fstream& inFile, vector<STUDENT>& students)
+{
+    inFile.open("textFiles\\STUDENT type.txt", ios::out | ios::trunc);
+    string line;
 
+    if (inFile.is_open())
+    {
+        while (getline(inFile, line))
+        {
+            cout << line << endl;
+        }
+    }
+}
 
+void showStudents(fstream& inFile, vector<STUDENT>& students)
+{
+    inFile.open("textFiles\\STUDENT type.txt", ios::out | ios::trunc);
+    string line;
+
+    if (inFile.is_open())
+    {
+        while (getline(inFile, line))
+        {
+            cout << line << endl;
+        }
+    }
+}
