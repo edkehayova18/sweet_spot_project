@@ -1,0 +1,25 @@
+STUDENT:
+Konstantin,Dubov,12A,SCRUM,KDubov@student.bg
+Irina,Dobreva,12B,FRONT END,IDobreva@student.bg
+Stoqn,Todorov,12V,QA,STodorov@student.bg
+Gabriela,Shihkova,12G,BACK END,GShishkova@student.bg
+
+Petar,Penchev,11A,BACK END,PPenchev@student.bg
+Mariq,Miroslavova,11B,SCRUM,MMiroslavova@student.bg
+Lubomir,Yanov,11V,FRONT END,LYanov@studen.bg
+Yordana,Polqkova,11G,QA,YPolqkova@student.bg
+
+Katq,Marinova,10A,QA,KMariova@student.bg
+Petq,Zlateva,10B,BACK END,PZlateva@student.bg
+Atanas,Zhechev,10V,SCRUM,AZhechev@student.bg
+Georgi,Petrov,10G,FRONT END,GPetrov@student.bg
+
+Borislava,Genkovska,9A,FRONT END,BGenkovska@student.bg
+Katrin,Belcheva,9B,QA,KBelcheva@student.bg
+Yoan,Tenev,9V,BACK END,YTenev@student.bg
+Valeri,Zaprqnov,9G,SCRUM,VZaprqnov@student.bg
+
+Canko,Ivanov,8A,SCRUM,CIvanov@student.bg
+Viktor,Borisov,8B,FRONT END,VBorisov@student.bg
+Denislav,Krustev,8V,QA,DKrustev@student.bg
+Marina,Kalcheva,8G,BACK END,MKalcheva@student.bg

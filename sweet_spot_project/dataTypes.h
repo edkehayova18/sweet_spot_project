@@ -18,7 +18,17 @@ struct STUDENT
 	string studentSurname;
 	string studentClass;
 	string studentEmail;
+	string toString()
+	{
+		string result;
+		result += studentName;
+		result += ", " + studentSurname;
+		result += ", " + studentClass;
+		result += ", " + studentEmail;
+		return result;
+	}
 };
+
 
 struct TEAM
 {
@@ -53,7 +63,6 @@ struct TEACHER
 	}
 };
 
-fstream schoolData;
-fstream studentsData;
-fstream teachersData;
-fstream teamsData;
+STUDENT users;
+fstream  inFile;
+vector<STUDENT> students;

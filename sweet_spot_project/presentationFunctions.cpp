@@ -237,7 +237,7 @@ void displayAdminOptions()
     case 2:
         //1) Show all students 
         //2) Show students by classes
-        newStudent(user);
+        newStudent(user,);
         //4) Remove student
         //5) Return to my profile
         //6) Exit

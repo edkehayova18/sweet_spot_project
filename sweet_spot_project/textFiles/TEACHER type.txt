@@ -1,0 +1,13 @@
+TEACHER:
+Mila,Kuncheva,10A,10B,9V,9G,MKuncheva@teach.bg,
+Grigor,PEetkov,11A,11B,11V,11G,12A,12B,12V,12G,GPetkov@teach.bg,
+Katerina,Mirkova,9A,9B,9V,9G,KMirkova@teach.bg,
+Marina,Zelkova,8A,MZelkova@teach.bg,
+Tonka,Poncheva,8B,TPoncheva@teach.bg,
+Hristomir,Kirov,10A,10B,10V,10G,11A,11B,11V,11G,12A,12B,12V,12G,HKirov@teach.bg,
+Gergana,Krusteva,8V,Krusteva@teach.bg,
+Kiril,Popov,11V,11G,12A,12B,Kpopov@teach.bg,
+Daniela,Mechkova,8G,DMechkova@teach.bg,
+Pena,Georgieva,11A,11B,12V,12G PGeorgieva@teach.bg,
+Yordan,Milchev,8A,8B,8V,8G,YMilchev@teach.bg,
+Uliq,Cvetanova,8A,8B,8V,8G,9A,9B,9V,9G,UCvetanova@teach.bg,
