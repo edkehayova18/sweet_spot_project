@@ -15,6 +15,6 @@ Download the game from [github](https://github.com/edkehayova18/sweet_spot_proje
 ## Team members and roles
 
 - Emily Kehayova - Scrum Trainer
-- Todor Bozhinov - Developer Back-End
+- Reneta Topalska  - Developer Back-End
 - Radina velichkova - Developer Front-End
-- Reneta Topalska - Quality engineer
+- Todor Bozhinov - Quality engineer
