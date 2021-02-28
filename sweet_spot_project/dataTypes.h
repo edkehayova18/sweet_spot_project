@@ -1,8 +1,14 @@
 #pragma once
+#include <windows.h>
 #include <iostream>
-#include <iomanip>
-#include <string>
 #include <fstream>
+#include <stdlib.h>
+#include <string>
+#include <ctime>
+#include <string>
+#include <sstream> 
+#include <conio.h>
+#include <vector>
 using namespace std;
 
 struct GUEST
@@ -30,14 +36,13 @@ struct STUDENT
 };
 
 
-struct TEAM
-{
+struct TEAM{
 	string teamName;
 	string teamDescription;
-	string teamStudents;
+	string teamStudents[8];
 	string teamStudentsStatus;
 	string teamDateOfSetUp;
-	string studentRole;
+	string studentRole[4];
 };
 
 struct SCHOOL
@@ -55,14 +60,10 @@ struct TEACHER
 	string teacherName;
 	string teacherSurname;
 	TEAM teamInformation;
-	string getTeacherTeams()
-	{
-		string team;
-		team = teamInformation.teamName + " : " + teamInformation.teamStudents;
-		return team;
-	}
 };
 
-STUDENT users;
-fstream  inFile;
+/*STUDENT users;
+ifstream  inFile;
+string line;
 vector<STUDENT> students;
+*/

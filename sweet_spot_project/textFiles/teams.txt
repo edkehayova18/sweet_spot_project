@@ -12,7 +12,7 @@ SCRUM
 FRONT END
 QA
 BACK END
-mo
+
 Programming masters,
 Hi!Our team Programming masters is developing a site whitch will sell eco - friendly clothing.,
 Petar,Penchev,
