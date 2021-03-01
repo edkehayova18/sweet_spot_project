@@ -20,6 +20,9 @@ void showAllProjects(ifstream& myFile, string line);
 void showAllGuests(ifstream& myFile, string line);
 void addStudent(STUDENT& student, ofstream& file);
 void addGuest(GUEST& guest, ofstream& file);
+void createTeam(TEAM& team, ofstream& file);
+void addTeacher(TEACHER& teacher, ofstream& file);
+
 
 
 

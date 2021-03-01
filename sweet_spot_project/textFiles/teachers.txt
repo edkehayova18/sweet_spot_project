@@ -1,6 +1,6 @@
 TEACHER:
-Mila,Kuncheva,10A,10B,9V,9G,MKuncheva@teach.bg,
-Grigor,PEetkov,11A,11B,11V,11G,12A,12B,12V,12G,GPetkov@teach.bg,
+Mila,Kuncheva,Yaba daba doo-Canko Ivanov,Viktor Borisov,Denislav Krustev,Marina Kalcheva,MKuncheva@teach.bg,
+Grigor,Petkov,11A,11B,11V,11G,12A,12B,12V,12G,GPetkov@teach.bg,
 Katerina,Mirkova,9A,9B,9V,9G,KMirkova@teach.bg,
 Marina,Zelkova,8A,MZelkova@teach.bg,
 Tonka,Poncheva,8B,TPoncheva@teach.bg,

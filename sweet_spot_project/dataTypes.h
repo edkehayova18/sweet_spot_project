@@ -39,10 +39,10 @@ struct STUDENT
 struct TEAM{
 	string teamName;
 	string teamDescription;
-	string teamStudents[8];
+	string teamStudents;
 	string teamStudentsStatus;
 	string teamDateOfSetUp;
-	string studentRole[4];
+	string studentRole;
 };
 
 struct SCHOOL
@@ -59,7 +59,8 @@ struct TEACHER
 {
 	string teacherName;
 	string teacherSurname;
-	TEAM teamInformation;
+	string teamInformation;
+	string teacherEmail;
 };
 
 /*STUDENT users;

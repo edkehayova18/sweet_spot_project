@@ -2,65 +2,36 @@ TEAM:
 
 Code machines,
 Hello! Our team is made to create a project, connected with the green enviroment!
-Konstantin,Dubov,
-Irina,Dobreva,
-Stoqn,Todorov,
-Gabriela,Shihkova,
- In use
+Konstantin Dubov,Irina Dobreva,Stoqn Todorov,Gabriela Shihkova
+In use
 20.01.2021.
-SCRUM
-FRONT END
-QA
-BACK END
+SCRUM,FRONT END,QA,BACK END
 
 Programming masters,
 Hi!Our team Programming masters is developing a site whitch will sell eco - friendly clothing.,
-Petar,Penchev,
-Mariq,Miroslavova,
-Lubomir,Yanov,
-Yordana,Polqkova,
+Petar Penchev,Mariq Miroslavova,Lubomir Yanov,Yordana Polqkova
 Not active
 07.02.2021,
-BACK END
-SCRUM
-FRONT END
-QA
+BACK END,SCRUM,FRONT END,QA
 
 IT attackers
 IT attackers - We don't need more description.,
-Katq,Marinova,
-Petq,Zlateva,
-Atanas,Zhechev,
-Georgi,Petrov,
+Katq Marinova,Petq Zlateva,Atanas Zhechev,Georgi Petrov
 In use
 05.02.2021,
-QA
-BACK END
-SCRUM
-FRONT END
+QA,BACK END,SCRUM,FRONT END
 
 The best soldiers,
 Hello! Our team is working on a game that will represents the world war II.
-Borislava,Genkovska,
-Katrin,Belcheva,
-Yoan,Tenev,
-Valeri,Zaprqnov,
+Borislava Genkovska,Katrin Belcheva,Yoan Tenev,Valeri Zaprqnov
 Archived
 09.02.2021,
-FRONT END
-QA
-BACK END
-SCRUM
+FRONT END,QA,BACK END,SCRUM
 
 Yaba daba doo
 We are deloping a software witch will help students in history classes. ,
-Canko,Ivanov,
-Viktor,Borisov,
-Denislav,Krustev,
-Marina,Kalcheva,
+Canko Ivanov,Viktor Borisov,Denislav Krustev,Marina Kalcheva
 In use
 10.02.2021,
-SCRUM
-FRONT END
-QA
-BACK END
+SCRUM,FRONT END,QA,BACK END
+

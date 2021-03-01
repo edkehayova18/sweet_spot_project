@@ -129,8 +129,8 @@ void addStudent(STUDENT& student, ofstream& file)
 	file.close();
 
 }
-
-/*void insertTeacher(TEACHER& teacher, ofstream& file)
+//that function has to fix
+void addTeacher(TEACHER& teacher, ofstream& file)
 {
 	TEAM teamInformation;
 	cout << "Name:";
@@ -141,14 +141,14 @@ void addStudent(STUDENT& student, ofstream& file)
 	cin >> teacher.teamInformation;
 	file.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
 	string line;
-	line += teacher.teacherName + "" + student.studentEmail;
-	line += "\n" + teamInformation.teamName + " : " + teamInformation.teamStudents;
+	line += teacher.teacherName + "," + teacher.teacherSurname + ",";
+	line += teacher.teamInformation + "," + teacher.teacherEmail;
 	
 	file << "\n";
 	file << line;
 	file.close();
 
-}*/
+}
 
 void addGuest(GUEST& guest, ofstream& file)
 {
@@ -165,33 +165,29 @@ void addGuest(GUEST& guest, ofstream& file)
 	file << line;
 	file.close();
 }
-
-/*void addTeam(TEAM& team, ofstream& file)
+//that function has to fix
+void createTeam(TEAM& team, ofstream& file)
 {
 	cout << "Name:";
 	cin >> team.teamName;
 	cout << "Description:";
 	cin >> team.teamDescription;
+	cout << "Please, separate the names of the students with comas!" << endl;
 	cout << "Students:";
-	for (int i = 0; i < 8; i++)
-	{
-		cin >> team.teamStudents[i];
-	}
+	cin >> team.teamStudents;
 	cout << "Status:";
 	cin >> team.teamStudentsStatus;
 	cout << "Date of set up:";
 	cin >> team.teamDateOfSetUp;
+	cout << "Please, separate the roles of the students with comas!" << endl;
 	cout << "Roles:";
-	for (int i = 0; i < 4; i++)
-	{
-		cin >> team.studentRole[i];
-	}
-	file.open("..\\sweet_spot_project\\textFiles\\guest.txt", ios::out | ios::app);
+	cin >> team.studentRole;
 	string line;
+	file.open("..\\sweet_spot_project\\textFiles\\teams.txt", ios::out | ios::app);
 	line += "\n" + team.teamName + "\n" + team.teamDescription + "\n";
-	line += team.teamStudents[8] + "\n" + team.teamStudentsStatus + "\n";
-	line +=	team.teamDateOfSetUp + "\n" + team.studentRole[4];
+	line += team.teamStudents + "\n" + team.teamStudentsStatus + "\n";
+	line += team.teamDateOfSetUp + "\n" + team.studentRole + "\n";
 	file << line;
 	file.close();
-}*/
+}
 
