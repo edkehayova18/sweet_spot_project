@@ -118,7 +118,7 @@ void addStudent(STUDENT& student, ofstream& file)
 	cout << "Class:";
 	cin >> student.studentClass;
 	cout << "Email:";
-	cin >> student.studentEmail;
+	getline(cin, student.studentEmail);
 	file.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
 	string line;
 	line += "\n" + student.studentName + "," + student.studentSurname + ","  ;
@@ -133,11 +133,13 @@ void addTeacher(TEACHER& teacher, ofstream& file)
 {
 	TEAM teamInformation;
 	cout << "Name:";
-	cin >> teacher.teacherName;
+	getline(cin, teacher.teacherName);
 	cout << "Surname:";
-	cin >> teacher.teacherSurname;
+	getline(cin, teacher.teacherSurname);
+	cout << "Email";
+	getline(cin, teacher.teacherEmail);
 	cout << "Teacher's Team Information:";
-	cin >> teacher.teamInformation;
+	getline(cin, teacher.teamInformation);
 	file.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
 	string line;
 	line += teacher.teacherName + "," + teacher.teacherSurname + ",";
@@ -156,7 +158,7 @@ void addGuest(GUEST& guest, ofstream& file)
 	cout << "Surname:";
 	cin >> guest.guestSurname;
 	cout << "Email:";
-	cin >> guest.guestEmail;
+	getline(cin, guest.guestEmail);
 	file.open("..\\sweet_spot_project\\textFiles\\guest.txt", ios::out | ios::app);
 	string line;
 	line += "\n" + guest.guestName + "," + guest.guestSurname + ",";
@@ -164,23 +166,23 @@ void addGuest(GUEST& guest, ofstream& file)
 	file << line;
 	file.close();
 }
-//that function has to fix
+
 void createTeam(TEAM& team, ofstream& file)
 {
 	cout << "Name:";
-	cin >> team.teamName;
+	getline(cin, team.teamName);
 	cout << "Description:";
-	cin >> team.teamDescription;
+	getline(cin, team.teamDescription);
 	cout << "Please, separate the names of the students with comas!" << endl;
 	cout << "Students:";
-	cin >> team.teamStudents;
+	getline(cin, team.teamStudents);
 	cout << "Status:";
-	cin >> team.teamStudentsStatus;
+	getline(cin, team.teamStudentsStatus);
 	cout << "Date of set up:";
-	cin >> team.teamDateOfSetUp;
+	getline(cin, team.teamDateOfSetUp);
 	cout << "Please, separate the roles of the students with comas!" << endl;
 	cout << "Roles:";
-	cin >> team.studentRole;
+	getline(cin, team.studentRole);
 	string line;
 	file.open("..\\sweet_spot_project\\textFiles\\teams.txt", ios::out | ios::app);
 	line += "\n" + team.teamName + "\n" + team.teamDescription + "\n";
