@@ -12,6 +12,7 @@
 #include "DataLayer/dataTypes.h"
 using namespace std;
 
+bool isLetters(string input);
 int stringToInt(string str);
 void showAllStudents(ifstream& myFile, string line);
 void showAllTeams(ifstream& myFile, string line);
