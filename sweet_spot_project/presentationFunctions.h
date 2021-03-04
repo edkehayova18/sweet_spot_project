@@ -1,7 +1,9 @@
 #pragma once
-#include <iostream>
-#include <ctime>
-#include <time.h>
-#include <sstream>
-#include <conio.h>
-using namespace std;
+#include "dataTypes.h"
+
+void handleUserChoice(vector<MENU_ITEM>& items);
+void displayMainMenu(vector<MENU_ITEM>& items);
+void menu4(int a);
+void menu1();
+void menu2();
+void menu3();

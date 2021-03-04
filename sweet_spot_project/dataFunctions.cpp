@@ -109,7 +109,6 @@ void showAllProjects(ifstream& myFile, string line)
 	}
 }
 
-
 void addStudent(STUDENT& student, ofstream& file) 
 {
 	cout << "Name:";
