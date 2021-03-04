@@ -17,7 +17,7 @@ bool isLetters(string input)
 	for (int i = 0; i < input.size(); i++)
 	{
 		int uppercaseChar = toupper(input[i]);
-		if (uppercaseChar < 'A' || uppercaseChar > 'Z')
+		if (uppercaseChar < 'A' || uppercaseChar > 'Z' || input[0] < 'A' || input[0] > 'Z')
 		{
 			return false;
 		}
