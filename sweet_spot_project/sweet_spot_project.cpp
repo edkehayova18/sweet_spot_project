@@ -1,8 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "dataFunction.h"
 #include "presentationFunctions.h"
-#include "dataFunction.h"
 using namespace std;
 
 int main()
