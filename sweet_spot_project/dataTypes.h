@@ -63,17 +63,8 @@ struct TEACHER
 	string teacherEmail;
 };
 
-typedef void (*menuHandler)();
-
-struct MENU_ITEM
-{
-	char letter;
-	string text;
-	menuHandler handler;
-	int handlerType;
-
-};
-
+ifstream myFile;
+string line;
 /*STUDENT users;
 ifstream  inFile;
 string line;
