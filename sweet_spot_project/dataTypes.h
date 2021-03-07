@@ -24,15 +24,6 @@ struct STUDENT
 	string studentSurname;
 	string studentClass;
 	string studentEmail;
-	string toString()
-	{
-		string result;
-		result += studentName;
-		result += ", " + studentSurname;
-		result += ", " + studentClass;
-		result += ", " + studentEmail;
-		return result;
-	}
 };
 
 
@@ -63,10 +54,3 @@ struct TEACHER
 	string teacherEmail;
 };
 
-ifstream myFile;
-string line;
-/*STUDENT users;
-ifstream  inFile;
-string line;
-vector<STUDENT> students;
-*/

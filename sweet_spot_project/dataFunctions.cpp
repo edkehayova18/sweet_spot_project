@@ -1,14 +1,5 @@
 #pragma once
-#include <windows.h>
-#include <iostream>
-#include <fstream>
-#include <stdlib.h>
-#include <string>
-#include <ctime>
-#include <string>
-#include <sstream> 
-#include <conio.h>
-#include <vector>
+#include "presentationFunctions.h"
 #include "dataTypes.h"
 using namespace std;
 
@@ -33,17 +24,19 @@ int stringToInt(string str) {
 	return x;
 }
 
-void showAllStudents(ifstream& myFile, string line)
+void showAllStudents()
 {
-	myFile.open("..\\sweet_spot_project\\textFiles\\student.txt");
-	if (myFile.is_open())
+	ifstream fileForStudents;
+	string lineForStudents;
+	fileForStudents.open("..\\sweet_spot_project\\textFiles\\student.txt");
+	if (fileForStudents.is_open())
 	{
-		while (!myFile.eof())
+		while (!fileForStudents.eof())
 		{
-			getline(myFile, line);
-			cout << line << endl;
+			getline(fileForStudents, lineForStudents);
+			cout << lineForStudents << endl;
 		}
-		myFile.close();
+		fileForStudents.close();
 	}
 	else
 	{
@@ -51,17 +44,19 @@ void showAllStudents(ifstream& myFile, string line)
 	}
 }
 
-void showAllTeams(ifstream& myFile, string line)
+void showAllTeams()
 {
-	myFile.open("..\\sweet_spot_project\\textFiles\\teams.txt");
-	if (myFile.is_open())
+	ifstream file;
+	string lineForTeams;
+	file.open("..\\sweet_spot_project\\textFiles\\teams.txt");
+	if (file.is_open())
 	{
-		while (!myFile.eof())
+		while (!file.eof())
 		{
-			getline(myFile, line);
-			cout << line << endl;
+			getline(file, lineForTeams);
+			cout << lineForTeams << endl;
 		}
-		myFile.close();
+		file.close();
 	}
 	else
 	{
@@ -69,17 +64,19 @@ void showAllTeams(ifstream& myFile, string line)
 	}
 }
 
-void showAllTeachers(ifstream& myFile, string line)
+void showAllTeachers()
 {
-	myFile.open("..\\sweet_spot_project\\textFiles\\teachers.txt");
-	if (myFile.is_open())
+	ifstream fileForTeachers;
+	string lineForTeachers;
+	fileForTeachers.open("..\\sweet_spot_project\\textFiles\\teachers.txt");
+	if (fileForTeachers.is_open())
 	{
-		while (!myFile.eof())
+		while (!fileForTeachers.eof())
 		{
-			getline(myFile, line);
-			cout << line << endl;
+			getline(fileForTeachers, lineForTeachers);
+			cout << lineForTeachers << endl;
 		}
-		myFile.close();
+		fileForTeachers.close();
 	}
 	else
 	{
@@ -87,17 +84,19 @@ void showAllTeachers(ifstream& myFile, string line)
 	}
 }
 
-void showAllGuests(ifstream& myFile, string line)
+void showAllGuests()
 {
-	myFile.open("..\\sweet_spot_project\\textFiles\\guest.txt");
-	if (myFile.is_open())
+	ifstream fileForGuests;
+	string lineForGuests;
+	fileForGuests.open("..\\sweet_spot_project\\textFiles\\guest.txt");
+	if (fileForGuests.is_open())
 	{
-		while (!myFile.eof())
+		while (!fileForGuests.eof())
 		{
-			getline(myFile, line);
-			cout << line << endl;
+			getline(fileForGuests, lineForGuests);
+			cout << lineForGuests << endl;
 		}
-		myFile.close();
+		fileForGuests.close();
 	}
 	else
 	{
@@ -105,17 +104,19 @@ void showAllGuests(ifstream& myFile, string line)
 	}
 }
 
-void showAllProjects(ifstream& myFile, string line)
+void showAllProjects()
 {
-	myFile.open("..\\sweet_spot_project\\textFiles\\projects.txt");
-	if (myFile.is_open())
+	ifstream fileForProjects;
+	string lineForProjects;
+	fileForProjects.open("..\\sweet_spot_project\\textFiles\\projects.txt");
+	if (fileForProjects.is_open())
 	{
-		while (!myFile.eof())
+		while (!fileForProjects.eof())
 		{
-			getline(myFile, line);
-			cout << line << endl;
+			getline(fileForProjects, lineForProjects);
+			cout << lineForProjects << endl;
 		}
-		myFile.close();
+		fileForProjects.close();
 	}
 	else
 	{
@@ -123,8 +124,9 @@ void showAllProjects(ifstream& myFile, string line)
 	}
 }
 
-void addStudent(STUDENT& student, ofstream& file) 
+void addStudent(STUDENT& student)
 {
+	ofstream fileForAddingStudent;
 	cout << "Name:";
 	cin >> student.studentName;
 	if (isLetters(student.studentName))
@@ -134,7 +136,7 @@ void addStudent(STUDENT& student, ofstream& file)
 	else
 	{
 		cout << "Try again!" << endl;
-		addStudent(student, file);
+		addStudent(student);
 	}
 	cout << "Surname:";
 	cin >> student.studentSurname;
@@ -145,24 +147,25 @@ void addStudent(STUDENT& student, ofstream& file)
 	else
 	{
 		cout << "Try again!" << endl;
-		addStudent(student, file);
+		addStudent(student);
 	}
 	cout << "Class:";
 	cin >> student.studentClass;
 	cout << "Email:";
 	getline(cin, student.studentEmail);
-	file.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
+	fileForAddingStudent.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
 	string line;
-	line += "\n" + student.studentName + "," + student.studentSurname + ","  ;
-	line += student.studentClass + "," + student.studentEmail ;
-	file << "\n";
-	file << line;
-	file.close();
+	line += "\n" + student.studentName + "," + student.studentSurname + ",";
+	line += student.studentClass + "," + student.studentEmail;
+	fileForAddingStudent << "\n";
+	fileForAddingStudent << line;
+	fileForAddingStudent.close();
 
 }
 
-void addTeacher(TEACHER& teacher, ofstream& file)
+void addTeacher(TEACHER& teacher)
 {
+	ofstream fileForAddingTeacher;
 	TEAM teamInformation;
 	cout << "Name:";
 	getline(cin, teacher.teacherName);
@@ -173,7 +176,7 @@ void addTeacher(TEACHER& teacher, ofstream& file)
 	else
 	{
 		cout << "Try again!" << endl;
-		addTeacher(teacher, file);
+		addTeacher(teacher);
 	}
 	cout << "Surname:";
 	getline(cin, teacher.teacherSurname);
@@ -184,25 +187,26 @@ void addTeacher(TEACHER& teacher, ofstream& file)
 	else
 	{
 		cout << "Try again!" << endl;
-		addTeacher(teacher, file);
+		addTeacher(teacher);
 	}
 	cout << "Email";
 	getline(cin, teacher.teacherEmail);
 	cout << "Teacher's Team Information:";
 	getline(cin, teacher.teamInformation);
-	file.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
+	fileForAddingTeacher.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
 	string line;
 	line += teacher.teacherName + "," + teacher.teacherSurname + ",";
 	line += teacher.teamInformation + "," + teacher.teacherEmail;
-	
-	file << "\n";
-	file << line;
-	file.close();
+
+	fileForAddingTeacher << "\n";
+	fileForAddingTeacher << line;
+	fileForAddingTeacher.close();
 
 }
 
-void addGuest(GUEST& guest, ofstream& file)
+void addGuest(GUEST& guest)
 {
+	ofstream file;
 	cout << "Name:";
 	cin >> guest.guestName;
 	if (isLetters(guest.guestName))
@@ -212,7 +216,7 @@ void addGuest(GUEST& guest, ofstream& file)
 	else
 	{
 		cout << "Try again!" << endl;
-		addGuest(guest, file);
+		addGuest(guest);
 	}
 	cout << "Surname:";
 	cin >> guest.guestSurname;
@@ -223,20 +227,21 @@ void addGuest(GUEST& guest, ofstream& file)
 	else
 	{
 		cout << "Try again!" << endl;
-		addGuest(guest, file);
+		addGuest(guest);
 	}
 	cout << "Email:";
 	getline(cin, guest.guestEmail);
 	file.open("..\\sweet_spot_project\\textFiles\\guest.txt", ios::out | ios::app);
 	string line;
 	line += "\n" + guest.guestName + "," + guest.guestSurname + ",";
-	line +=  guest.guestEmail;
+	line += guest.guestEmail;
 	file << line;
 	file.close();
 }
 
-void createTeam(TEAM& team, ofstream& file)
+void createTeam(TEAM& team)
 {
+	ofstream fileForAddingTeams;
 	cout << "Name:";
 	getline(cin, team.teamName);
 	if (isLetters(team.teamName))
@@ -246,7 +251,7 @@ void createTeam(TEAM& team, ofstream& file)
 	else
 	{
 		cout << "Try again!" << endl;
-		createTeam(team, file);
+		createTeam(team);
 	}
 	cout << "Description:";
 	getline(cin, team.teamDescription);
@@ -257,7 +262,7 @@ void createTeam(TEAM& team, ofstream& file)
 	else
 	{
 		cout << "Try again!" << endl;
-		createTeam(team, file);
+		createTeam(team);
 	}
 
 	cout << "Please, separate the names of the students with comas!" << endl;
@@ -271,11 +276,11 @@ void createTeam(TEAM& team, ofstream& file)
 	cout << "Roles:";
 	getline(cin, team.studentRole);
 	string line;
-	file.open("..\\sweet_spot_project\\textFiles\\teams.txt", ios::out | ios::app);
+	fileForAddingTeams.open("..\\sweet_spot_project\\textFiles\\teams.txt", ios::out | ios::app);
 	line += "\n" + team.teamName + "\n" + team.teamDescription + "\n";
 	line += team.teamStudents + "\n" + team.teamStudentsStatus + "\n";
 	line += team.teamDateOfSetUp + "\n" + team.studentRole + "\n";
-	file << line;
-	file.close();
+	fileForAddingTeams << line;
+	fileForAddingTeams.close();
 }
 

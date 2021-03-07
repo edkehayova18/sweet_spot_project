@@ -2,9 +2,27 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include "presentationFunctions.h"
-
+#include "dataTypes.h"
+#include "dataFunctions.h"
 using namespace std;
+
+int readInt(std::istream& input = std::cin, std::ostream& output = std::cout)
+{
+
+    int num;
+
+    while (!(input >> num))
+    {
+        input.clear();
+        input.ignore(INT_MAX, '\n');
+        output << endl;
+        //output << MSG_INVALID_SYMBOL_TRY_AGAIN;
+    }
+
+    return num;
+
+}
+
 void welcome() 
 {
     cout << "************************************************************" << endl;
@@ -14,7 +32,7 @@ void welcome()
     cout << "************************************************************" << endl;
 
 }
-void displayMenu() 
+void displayMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team)
 {
     int choice = 0;
     welcome();
@@ -36,7 +54,7 @@ void displayMenu()
         cout << "Enter an option: ";
         choice = readInt();
 
-        while (choice > 3 or choice < 1)
+        while (choice > 3 || choice < 1)
         {
             cout << endl;
             cout << "The number you enter has to be between 1 and 4! Please, try again: ";
@@ -49,24 +67,24 @@ void displayMenu()
         switch (choice)
         {
         case 1:
-			
-			cin >> choice;
-			switch (choice)
-			{
-			case 1:
+
+            cin >> choice;
+            switch (choice)
+            {
+            case 1:
                 cout << "1. Show all students" << endl;
                 cout << "2. Show all teachers" << endl;
                 cout << "3. Show all projects" << endl;
                 cout << "4. Show all teams   " << endl;
                 cout << "5. Exit             " << endl;
-				switch (choice)
-				{
-				case 1:
-                    showAllStudents(myFile, line);
-					break;
-				case 2:
+                switch (choice)
+                {
+                case 1:
+                    showAllStudents();
+                    break;
+                case 2:
                     showAllTeachers();
-					break;
+                    break;
                 case 3:
                     showAllProjects();
                     break;
@@ -76,43 +94,44 @@ void displayMenu()
                 case 5:
                     exit(0);
                     break;
-				}
-            break;
-
-        case 2:
-            createTeam();
-            break;
-
-        case 3:
-            cout << "1. Add student" << endl;
-            cout << "2. Add teacher" << endl;
-            cout << "3. Add project" << endl;
-            cout << "4. Exit             " << endl;
-            switch (choice)
-            {
-            case 1:
-                addStudent(myFile, line);
+                }
                 break;
+
             case 2:
-                addTeacher();
+                createTeam(team);
                 break;
+
             case 3:
-              
+                cout << "1. Add student" << endl;
+                cout << "2. Add teacher" << endl;
+                cout << "3. Add project" << endl;
+                cout << "4. Exit             " << endl;
+                switch (choice)
+                {
+                case 1:
+                    addStudent(student);
+                    break;
+                case 2:
+                    addTeacher(teacher);
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+                    exit(0);
+                    break;
+                }
                 break;
             case 4:
+                //delete team?
+                break;
+            case 5:
                 exit(0);
                 break;
             }
-            break;
-        case 4:
-           //delete team?
-            break;
-        case 5:
-            exit(0);
-            break;
         }
+
+
     }
-
-
 }
 

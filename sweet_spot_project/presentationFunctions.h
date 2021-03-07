@@ -9,6 +9,7 @@
 #include <sstream> 
 #include <conio.h>
 #include <vector>
-#include "dataFunctions.h"
+#include "dataTypes.h"
 using namespace std;
-void displayMenu();
+
+void displayMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team);

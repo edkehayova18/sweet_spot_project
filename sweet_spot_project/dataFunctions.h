@@ -9,21 +9,17 @@
 #include <sstream> 
 #include <conio.h>
 #include <vector>
-#include "DataLayer/dataTypes.h"
+#include "dataTypes.h"
 using namespace std;
 
 bool isLetters(string input);
 int stringToInt(string str);
-void showAllStudents(ifstream& myFile, string line);
-void showAllTeams(ifstream& myFile, string line);
-void showAllTeachers(ifstream& myFile, string line);
-void showAllProjects(ifstream& myFile, string line);
-void showAllGuests(ifstream& myFile, string line);
-void addStudent(STUDENT& student, ofstream& file);
-void addGuest(GUEST& guest, ofstream& file);
-void createTeam(TEAM& team, ofstream& file);
-void addTeacher(TEACHER& teacher, ofstream& file);
-
-
-
-
+void showAllStudents();
+void showAllTeams();
+void showAllTeachers();
+void showAllProjects();
+void showAllGuests();
+void addStudent(STUDENT& student);
+void addGuest(GUEST& guest);
+void createTeam(TEAM& team);
+void addTeacher(TEACHER& teacher);
