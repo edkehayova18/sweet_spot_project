@@ -13,6 +13,7 @@
 using namespace std;
 
 void countStudents();
+void countTeachers();
 bool isLetters(string input);
 int stringToInt(string str);
 void showAllStudents();

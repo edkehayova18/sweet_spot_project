@@ -39,7 +39,7 @@ void countTeachers()
 void countTeams()
 {
 	int numLines = 0;
-	ifstream in("..\\sweet_spot_project\\textFiles\\teachers.txt");
+	ifstream in("..\\sweet_spot_project\\textFiles\\teams.txt");
 	string unused;
 	while (getline(in, unused))
 	{
