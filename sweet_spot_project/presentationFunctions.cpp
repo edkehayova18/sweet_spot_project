@@ -6,6 +6,7 @@
 #include "dataFunctions.h"
 using namespace std;
 
+
 int readInt(std::istream& input = std::cin, std::ostream& output = std::cout)
 {
 
@@ -68,11 +69,12 @@ void displayMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team)
         {
         case 1:
             int showChoice;
-            cout << "1. Show all students" << endl;
-            cout << "2. Show all teachers" << endl;
-            cout << "3. Show all projects" << endl;
-            cout << "4. Show all teams   " << endl;
-            cout << "5. Exit             " << endl;
+            cout << "1. Show all students     " << endl;
+            cout << "2. Show all teachers     " << endl;
+            cout << "3. Show all projects     " << endl;
+            cout << "4. Show all teams        " << endl;
+            cout << "5.Show school information" << endl;
+            cout << "5. Exit                  " << endl;
             cin >> showChoice;
             switch (showChoice)
             {
@@ -89,6 +91,8 @@ void displayMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team)
                 showAllTeams();
                 break;
             case 5:
+                countStudents();
+            case 6:
                 exit(0);
                 break;
             }

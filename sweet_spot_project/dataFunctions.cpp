@@ -3,6 +3,58 @@
 #include "dataTypes.h"
 using namespace std;
 
+void countStudents()
+{
+	int numLines = 0;
+	ifstream in("..\\sweet_spot_project\\textFiles\\student.txt");
+	string unused;
+	while (getline(in, unused))
+	{
+		++numLines;
+	}
+	cout << numLines;
+	ofstream add;
+	add.open("..\\sweet_spot_project\\textFiles\\school.txt", ios::out | ios::app);
+	add << "\nStudents: ";
+	add << numLines;
+	add.close();
+}
+
+void countTeachers()
+{
+	int numLines = 0;
+	ifstream in("..\\sweet_spot_project\\textFiles\\teachers.txt");
+	string unused;
+	while (getline(in, unused))
+	{
+		++numLines;
+	}
+	cout << numLines;
+	ofstream add;
+	add.open("..\\sweet_spot_project\\textFiles\\school.txt", ios::out | ios::app);
+	add << "\nStudents: ";
+	add << numLines;
+	add.close();
+}
+void countTeams()
+{
+	int numLines = 0;
+	ifstream in("..\\sweet_spot_project\\textFiles\\teachers.txt");
+	string unused;
+	while (getline(in, unused))
+	{
+		++numLines;
+	}
+	cout << numLines;
+	ofstream add;
+	add.open("..\\sweet_spot_project\\textFiles\\school.txt", ios::out | ios::app);
+	add << "\nStudents: ";
+	add << numLines;
+	add.close();
+}
+
+
+
 bool isLetters(string input)
 {
 	for (int i = 0; i < input.size(); i++)

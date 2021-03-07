@@ -1,4 +1,3 @@
-TEACHER:
 Mila,Kuncheva,Yaba daba doo-Canko Ivanov,Viktor Borisov,Denislav Krustev,Marina Kalcheva,MKuncheva@teach.bg,
 Grigor,Petkov,11A,11B,11V,11G,12A,12B,12V,12G,GPetkov@teach.bg,
 Katerina,Mirkova,9A,9B,9V,9G,KMirkova@teach.bg,

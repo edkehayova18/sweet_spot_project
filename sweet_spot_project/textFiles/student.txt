@@ -1,4 +1,3 @@
-STUDENT:
 Konstantin,Dubov,12A,KDubov@student.bg
 Irina,Dobreva,12B,IDobreva@student.bg
 Stoqn,Todorov,12V,STodorov@student.bg

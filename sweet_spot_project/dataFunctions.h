@@ -12,6 +12,7 @@
 #include "dataTypes.h"
 using namespace std;
 
+void countStudents();
 bool isLetters(string input);
 int stringToInt(string str);
 void showAllStudents();
