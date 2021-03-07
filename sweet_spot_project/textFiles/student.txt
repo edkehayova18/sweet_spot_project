@@ -18,4 +18,3 @@ Canko,Ivanov,8A,CIvanov@student.bg
 Viktor,Borisov,8B,VBorisov@student.bg
 Denislav,Krustev,8V,DKrustev@student.bg
 Marina,Kalcheva,8G,MKalcheva@student.bg
-Harry,Hook,11B,Hook@codingburgas.bg

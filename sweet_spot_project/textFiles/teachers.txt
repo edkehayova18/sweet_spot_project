@@ -10,4 +10,3 @@ Daniela,Mechkova,The best soldiers-,DMechkova@teach.bg,
 Pena,Georgieva,IT attackers-Katq Marinova,Petq Zlateva,Atanas Zhechev,Georgi Petrov, PGeorgieva@teach.bg,
 Yordan,Milchev,Programming masters-Petar Penchev,Mariq Miroslavova,Lubomir Yanov,Yordana Polqkova,YMilchev@teach.bg,
 Uliq,Cvetanova,Yaba daba doo-Canko Ivanov,Viktor Borisov,Denislav Krustev,Marina Kalcheva,UCvetanova@teach.bg,
-Ray,ospodinov,he Beasts-Yourdan Ivanov,Malina Georgieva, Georgi Purvanov,Alena Malenska,Gospodinov@gmail.com

@@ -3,6 +3,7 @@
 #include "dataTypes.h"
 using namespace std;
 
+//count all students in student.txt 
 void countStudents()
 {
 	int numLines = 0;
@@ -16,6 +17,7 @@ void countStudents()
 	
 }
 
+//count all teachers in teachers.txt 
 void countTeachers()
 {
 	int numLines = 0;
@@ -28,6 +30,8 @@ void countTeachers()
 	cout << numLines;
 	
 }
+
+//count all teams in teams.txt 
 void countTeams()
 {
 	int numLines = 0;
@@ -41,6 +45,7 @@ void countTeams()
 	
 }
 
+//check if there are any numbers or does the first letter is in upper case
 bool isLetters(string input)
 {
 	for (int i = 0; i < input.size(); i++)
@@ -55,6 +60,7 @@ bool isLetters(string input)
 	return true;
 }
 
+//convert string to int
 int stringToInt(string str) {
 	stringstream geek(str);
 	int x = 0;
@@ -62,6 +68,7 @@ int stringToInt(string str) {
 	return x;
 }
 
+//show all students in student.txt
 void showAllStudents()
 {
 	ifstream fileForStudents;
@@ -84,6 +91,7 @@ void showAllStudents()
 	}
 }
 
+//show all teams in teams.txt
 void showAllTeams()
 {
 	ifstream file;
@@ -106,6 +114,7 @@ void showAllTeams()
 	}
 }
 
+//show all teachers in teachers.txt
 void showAllTeachers()
 {
 	ifstream fileForTeachers;
@@ -128,6 +137,7 @@ void showAllTeachers()
 	}
 }
 
+//show all guests in gurst.txt
 void showAllGuests()
 {
 	ifstream fileForGuests;
@@ -150,6 +160,7 @@ void showAllGuests()
 	}
 }
 
+//show all projects in project.txt
 void showAllProjects()
 {
 	ifstream fileForProjects;
@@ -172,6 +183,7 @@ void showAllProjects()
 	}
 }
 
+//add student in student.txt
 void addStudent(STUDENT& student)
 {
 	ofstream fileForAddingStudent;
@@ -206,6 +218,7 @@ void addStudent(STUDENT& student)
 
 }
 
+//add teacher in teacher.txt
 void addTeacher(TEACHER& teacher)
 {
 	ofstream fileForAddingTeacher;
@@ -246,6 +259,7 @@ void addTeacher(TEACHER& teacher)
 
 }
 
+//create a  team in teams.txt
 void createTeam(TEAM& team)
 {
 	ofstream fileForAddingTeams;

@@ -11,7 +11,8 @@
 #include "dataFunctions.h"
 using namespace std;
 
-void spaces(unsigned short int n) // prints spaces
+// prints spaces
+void spaces(unsigned short int n) 
 {
     for (int i = 0; i < n; i++)
     {
@@ -19,6 +20,7 @@ void spaces(unsigned short int n) // prints spaces
     }
 }
 
+//read integer and check it if the number is correct
 int readInt(std::istream& input = std::cin, std::ostream& output = std::cout)
 {
 
@@ -36,6 +38,7 @@ int readInt(std::istream& input = std::cin, std::ostream& output = std::cout)
 
 }
 
+//our welcome border
 void welcome()
 {
     spaces(20); cout <<PURPLE<< "*******************************************************" <<RESET <<endl;
@@ -45,6 +48,8 @@ void welcome()
     spaces(20); cout <<PURPLE<< "*******************************************************" <<RESET<< endl;
 
 }
+
+//save the school information
 void schoolInfo()
 {
     string keepInfoFromFile;
@@ -64,6 +69,8 @@ void schoolInfo()
         cout << "Error opening file!";
     }
 }
+
+//print the school information
 void printSchoolInfo()
 {
   
@@ -81,6 +88,8 @@ void printSchoolInfo()
     spaces(20);  cout << "_______________________________________________________" << endl;
     this_thread::sleep_for(chrono::milliseconds(500));
 }
+
+//the main menu
 void displayMainMenu()
 {
     cout << endl;
@@ -108,6 +117,7 @@ void displayMainMenu()
     cout << endl;
 }
 
+//display all options
 void displayShowOptions()
 {
     spaces(20);  cout << "_______________________________________________________" << endl;
@@ -124,6 +134,7 @@ void displayShowOptions()
     this_thread::sleep_for(chrono::milliseconds(300));
 }
 
+//display all add options
 void displayAddOptions()
 {
     spaces(20);  cout << "_______________________________________________________" << endl;
@@ -137,6 +148,7 @@ void displayAddOptions()
     this_thread::sleep_for(chrono::milliseconds(300));
 }
 
+//print the main menu
 void printMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team)
 {
     int choice = 0;
