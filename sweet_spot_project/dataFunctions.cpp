@@ -150,8 +150,10 @@ void addStudent(STUDENT& student)
 		addStudent(student);
 	}
 	cout << "Class:";
-	cin >> student.studentClass;
+	cin.ignore();
+	getline(cin, student.studentClass);
 	cout << "Email:";
+	cin.ignore();
 	getline(cin, student.studentEmail);
 	fileForAddingStudent.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
 	string line;
@@ -168,6 +170,7 @@ void addTeacher(TEACHER& teacher)
 	ofstream fileForAddingTeacher;
 	TEAM teamInformation;
 	cout << "Name:";
+	cin.ignore();
 	getline(cin, teacher.teacherName);
 	if (isLetters(teacher.teacherName))
 	{
@@ -179,21 +182,20 @@ void addTeacher(TEACHER& teacher)
 		addTeacher(teacher);
 	}
 	cout << "Surname:";
+	cin.ignore();
 	getline(cin, teacher.teacherSurname);
 	if (isLetters(teacher.teacherSurname))
 	{
 		cout << "";
 	}
-	else
-	{
-		cout << "Try again!" << endl;
-		addTeacher(teacher);
-	}
-	cout << "Email";
+	cout << "Email:";
+	cin.ignore();
 	getline(cin, teacher.teacherEmail);
-	cout << "Teacher's Team Information:";
+	cout << "Teacher's Team Information:" << endl;
+	cout << "Please write it like this: NameOfTheTeam,Description,StudentsInTheTeam,DateOfSetUp,StudentsRoles" << endl;
+	cin.ignore();
 	getline(cin, teacher.teamInformation);
-	fileForAddingTeacher.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
+	fileForAddingTeacher.open("..\\sweet_spot_project\\textFiles\\teachers.txt", ios::out | ios::app);
 	string line;
 	line += teacher.teacherName + "," + teacher.teacherSurname + ",";
 	line += teacher.teamInformation + "," + teacher.teacherEmail;
@@ -204,76 +206,28 @@ void addTeacher(TEACHER& teacher)
 
 }
 
-void addGuest(GUEST& guest)
-{
-	ofstream file;
-	cout << "Name:";
-	cin >> guest.guestName;
-	if (isLetters(guest.guestName))
-	{
-		cout << "";
-	}
-	else
-	{
-		cout << "Try again!" << endl;
-		addGuest(guest);
-	}
-	cout << "Surname:";
-	cin >> guest.guestSurname;
-	if (isLetters(guest.guestSurname))
-	{
-		cout << "";
-	}
-	else
-	{
-		cout << "Try again!" << endl;
-		addGuest(guest);
-	}
-	cout << "Email:";
-	getline(cin, guest.guestEmail);
-	file.open("..\\sweet_spot_project\\textFiles\\guest.txt", ios::out | ios::app);
-	string line;
-	line += "\n" + guest.guestName + "," + guest.guestSurname + ",";
-	line += guest.guestEmail;
-	file << line;
-	file.close();
-}
-
 void createTeam(TEAM& team)
 {
 	ofstream fileForAddingTeams;
 	cout << "Name:";
+	cin.ignore();
 	getline(cin, team.teamName);
-	if (isLetters(team.teamName))
-	{
-		cout << "";
-	}
-	else
-	{
-		cout << "Try again!" << endl;
-		createTeam(team);
-	}
 	cout << "Description:";
+	cin.ignore();
 	getline(cin, team.teamDescription);
-	if (isLetters(team.teamDescription))
-	{
-		cout << "";
-	}
-	else
-	{
-		cout << "Try again!" << endl;
-		createTeam(team);
-	}
-
 	cout << "Please, separate the names of the students with comas!" << endl;
 	cout << "Students:";
+	cin.ignore();
 	getline(cin, team.teamStudents);
 	cout << "Status:";
+	cin.ignore();
 	getline(cin, team.teamStudentsStatus);
 	cout << "Date of set up:";
+	cin.ignore();
 	getline(cin, team.teamDateOfSetUp);
 	cout << "Please, separate the roles of the students with comas!" << endl;
 	cout << "Roles:";
+	cin.ignore();
 	getline(cin, team.studentRole);
 	string line;
 	fileForAddingTeams.open("..\\sweet_spot_project\\textFiles\\teams.txt", ios::out | ios::app);

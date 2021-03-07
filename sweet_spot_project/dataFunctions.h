@@ -20,6 +20,5 @@ void showAllTeachers();
 void showAllProjects();
 void showAllGuests();
 void addStudent(STUDENT& student);
-void addGuest(GUEST& guest);
 void createTeam(TEAM& team);
 void addTeacher(TEACHER& teacher);
