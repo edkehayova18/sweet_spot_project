@@ -41,8 +41,6 @@ void countTeams()
 	
 }
 
-
-
 bool isLetters(string input)
 {
 	for (int i = 0; i < input.size(); i++)
@@ -96,7 +94,7 @@ void showAllTeams()
 		while (!file.eof())
 		{
 			getline(file, lineForTeams);
-			spaces(20);  cout << "_______________________________________________________" << endl;
+			spaces(20);  cout << "_________________________________________________________________________" << endl;
 			this_thread::sleep_for(chrono::milliseconds(500));
 			spaces(20);cout << lineForTeams << endl;
 		}
@@ -203,7 +201,6 @@ void addStudent(STUDENT& student)
 	string line;
 	line += "\n" + student.studentName + "," + student.studentSurname + ",";
 	line += student.studentClass + "," + student.studentEmail;
-	fileForAddingStudent << "\n";
 	fileForAddingStudent << line;
 	fileForAddingStudent.close();
 
@@ -236,15 +233,14 @@ void addTeacher(TEACHER& teacher)
 	cin.ignore();
 	getline(cin, teacher.teacherEmail);
 	spaces(20); cout << "Teacher's Team Information:" << endl;
-	spaces(20); cout <<YELLOW<< "Please write it like this: NameOfTheTeam,Description,StudentsInTheTeam,DateOfSetUp,StudentsRoles" <<RESET<< endl;
+	spaces(20); cout <<YELLOW<< "Please write it like this: NameOfTheTeam-StudentsInTheTeam" <<RESET<< endl;
 	cin.ignore();
 	getline(cin, teacher.teamInformation);
 	fileForAddingTeacher.open("..\\sweet_spot_project\\textFiles\\teachers.txt", ios::out | ios::app);
 	string line;
-	line += teacher.teacherName + "," + teacher.teacherSurname + ",";
+	line += "\n" + teacher.teacherName + "," + teacher.teacherSurname + ",";
 	line += teacher.teamInformation + "," + teacher.teacherEmail;
 
-	fileForAddingTeacher << "\n";
 	fileForAddingTeacher << line;
 	fileForAddingTeacher.close();
 
@@ -276,9 +272,9 @@ void createTeam(TEAM& team)
 	getline(cin, team.studentRole);
 	string line;
 	fileForAddingTeams.open("..\\sweet_spot_project\\textFiles\\teams.txt", ios::out | ios::app);
-	line += "\n" + team.teamName + "\n" + team.teamDescription + "\n";
-	line += team.teamStudents + "\n" + team.teamStudentsStatus + "\n";
-	line += team.teamDateOfSetUp + "\n" + team.studentRole + "\n";
+	line += "\n"+ team.teamName + "," + team.teamDescription + ",";
+	line += team.teamStudents + "," + team.teamStudentsStatus + ",";
+	line += team.teamDateOfSetUp + "," + team.studentRole;
 	fileForAddingTeams << line;
 	fileForAddingTeams.close();
 }

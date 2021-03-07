@@ -151,7 +151,7 @@ void printMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team)
         while (choice > 5 || choice < 1)
         {
             cout << endl;
-            cout <<RED<< "The number you enter has to be between 1 and 5! Please, try again: "<<RESET;
+            cout <<RED<< "You have to enter a number between 1 and 5! Please try again!"<<RESET;
             choice = readInt();
         }
         system("cls");
@@ -166,23 +166,19 @@ void printMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team)
             {
             case 1:
                 showAllStudents();
-              
                 break;
             case 2:
                 showAllTeachers();
-               
                 break;
             case 3:
                 showAllProjects();
-                
                 break;
             case 4:
                 showAllTeams();
-                
                 break;
             case 5:
                 printSchoolInfo();
-               
+                break;
             case 6:
                 displayMainMenu();
                 break;
@@ -202,11 +198,9 @@ void printMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team)
             {
             case 1:
                 addStudent(student);
-               
                 break;
             case 2:
                 addTeacher(teacher);
-               
                 break;
             case 4:
                 displayMainMenu();
