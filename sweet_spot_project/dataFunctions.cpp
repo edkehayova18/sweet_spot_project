@@ -13,11 +13,7 @@ void countStudents()
 		++numLines;
 	}
 	cout << numLines;
-	ofstream add;
-	add.open("..\\sweet_spot_project\\textFiles\\school.txt", ios::out | ios::app);
-	add << "\nStudents: ";
-	add << numLines;
-	add.close();
+	
 }
 
 void countTeachers()
@@ -30,11 +26,7 @@ void countTeachers()
 		++numLines;
 	}
 	cout << numLines;
-	ofstream add;
-	add.open("..\\sweet_spot_project\\textFiles\\school.txt", ios::out | ios::app);
-	add << "\nStudents: ";
-	add << numLines;
-	add.close();
+	
 }
 void countTeams()
 {
@@ -46,11 +38,7 @@ void countTeams()
 		++numLines;
 	}
 	cout << numLines;
-	ofstream add;
-	add.open("..\\sweet_spot_project\\textFiles\\school.txt", ios::out | ios::app);
-	add << "\nStudents: ";
-	add << numLines;
-	add.close();
+	
 }
 
 
@@ -86,13 +74,15 @@ void showAllStudents()
 		while (!fileForStudents.eof())
 		{
 			getline(fileForStudents, lineForStudents);
-			cout << lineForStudents << endl;
+			spaces(20);  cout << "_______________________________________________________" << endl;
+			this_thread::sleep_for(chrono::milliseconds(500));
+			spaces(20); cout << lineForStudents << endl;
 		}
 		fileForStudents.close();
 	}
 	else
 	{
-		cout << "Error opening file!";
+		cout <<RED<< "Error opening file!"<<RESET;
 	}
 }
 
@@ -106,7 +96,9 @@ void showAllTeams()
 		while (!file.eof())
 		{
 			getline(file, lineForTeams);
-			cout << lineForTeams << endl;
+			spaces(20);  cout << "_______________________________________________________" << endl;
+			this_thread::sleep_for(chrono::milliseconds(500));
+			spaces(20);cout << lineForTeams << endl;
 		}
 		file.close();
 	}
@@ -126,7 +118,9 @@ void showAllTeachers()
 		while (!fileForTeachers.eof())
 		{
 			getline(fileForTeachers, lineForTeachers);
-			cout << lineForTeachers << endl;
+			spaces(20);  cout << "_______________________________________________________" << endl;
+			this_thread::sleep_for(chrono::milliseconds(500));
+			spaces(20);cout << lineForTeachers << endl;
 		}
 		fileForTeachers.close();
 	}
@@ -146,7 +140,9 @@ void showAllGuests()
 		while (!fileForGuests.eof())
 		{
 			getline(fileForGuests, lineForGuests);
-			cout << lineForGuests << endl;
+			spaces(20);  cout << "_______________________________________________________" << endl;
+			this_thread::sleep_for(chrono::milliseconds(500));
+			spaces(20);cout << lineForGuests << endl;
 		}
 		fileForGuests.close();
 	}
@@ -166,7 +162,9 @@ void showAllProjects()
 		while (!fileForProjects.eof())
 		{
 			getline(fileForProjects, lineForProjects);
-			cout << lineForProjects << endl;
+			spaces(20);  cout << "_______________________________________________________" << endl;
+			this_thread::sleep_for(chrono::milliseconds(500));
+			spaces(20);cout << lineForProjects << endl;
 		}
 		fileForProjects.close();
 	}
@@ -179,34 +177,28 @@ void showAllProjects()
 void addStudent(STUDENT& student)
 {
 	ofstream fileForAddingStudent;
-	cout << "Name:";
-	cin >> student.studentName;
+	spaces(20); cout << "Name:"; cin >> student.studentName;
 	if (isLetters(student.studentName))
 	{
 		cout << "";
 	}
 	else
 	{
-		cout << "Try again!" << endl;
+		spaces(20); cout <<RED<< "Try again!" <<RESET<< endl;
 		addStudent(student);
 	}
-	cout << "Surname:";
-	cin >> student.studentSurname;
+	spaces(20); cout << "Surname:"; cin >> student.studentSurname;
 	if (isLetters(student.studentSurname))
 	{
 		cout << "";
 	}
 	else
 	{
-		cout << "Try again!" << endl;
+		spaces(20); cout <<RED<< "Try again!" <<RESET <<endl;
 		addStudent(student);
 	}
-	cout << "Class:";
-	cin.ignore();
-	getline(cin, student.studentClass);
-	cout << "Email:";
-	cin.ignore();
-	getline(cin, student.studentEmail);
+	spaces(20); cout << "Class:"; cin.ignore(); getline(cin, student.studentClass);
+	spaces(20); cout << "Email:"; cin.ignore(); getline(cin, student.studentEmail);
 	fileForAddingStudent.open("..\\sweet_spot_project\\textFiles\\student.txt", ios::out | ios::app);
 	string line;
 	line += "\n" + student.studentName + "," + student.studentSurname + ",";
@@ -221,7 +213,7 @@ void addTeacher(TEACHER& teacher)
 {
 	ofstream fileForAddingTeacher;
 	TEAM teamInformation;
-	cout << "Name:";
+	spaces(20); cout << "Name:";
 	cin.ignore();
 	getline(cin, teacher.teacherName);
 	if (isLetters(teacher.teacherName))
@@ -230,21 +222,21 @@ void addTeacher(TEACHER& teacher)
 	}
 	else
 	{
-		cout << "Try again!" << endl;
+		spaces(20);	cout << "Try again!" << endl;
 		addTeacher(teacher);
 	}
-	cout << "Surname:";
+	spaces(20); cout << "Surname:";
 	cin.ignore();
 	getline(cin, teacher.teacherSurname);
 	if (isLetters(teacher.teacherSurname))
 	{
 		cout << "";
 	}
-	cout << "Email:";
+	spaces(20); cout << "Email:";
 	cin.ignore();
 	getline(cin, teacher.teacherEmail);
-	cout << "Teacher's Team Information:" << endl;
-	cout << "Please write it like this: NameOfTheTeam,Description,StudentsInTheTeam,DateOfSetUp,StudentsRoles" << endl;
+	spaces(20); cout << "Teacher's Team Information:" << endl;
+	spaces(20); cout <<YELLOW<< "Please write it like this: NameOfTheTeam,Description,StudentsInTheTeam,DateOfSetUp,StudentsRoles" <<RESET<< endl;
 	cin.ignore();
 	getline(cin, teacher.teamInformation);
 	fileForAddingTeacher.open("..\\sweet_spot_project\\textFiles\\teachers.txt", ios::out | ios::app);
@@ -261,24 +253,25 @@ void addTeacher(TEACHER& teacher)
 void createTeam(TEAM& team)
 {
 	ofstream fileForAddingTeams;
-	cout << "Name:";
+	spaces(20); cout << YELLOW << "            CREATE A TEAM         " << RESET << endl;
+	spaces(20); cout << "Name:";
 	cin.ignore();
 	getline(cin, team.teamName);
-	cout << "Description:";
+	spaces(20); cout << "Description:";
 	cin.ignore();
 	getline(cin, team.teamDescription);
-	cout << "Please, separate the names of the students with comas!" << endl;
-	cout << "Students:";
+	spaces(20); cout <<YELLOW<< "Please, separate the names of the students with comas!" << endl;
+	spaces(20); cout << "Students:";
 	cin.ignore();
 	getline(cin, team.teamStudents);
-	cout << "Status:";
+	spaces(20); cout << "Status:";
 	cin.ignore();
 	getline(cin, team.teamStudentsStatus);
-	cout << "Date of set up:";
+	spaces(20); cout << "Date of set up:";
 	cin.ignore();
 	getline(cin, team.teamDateOfSetUp);
-	cout << "Please, separate the roles of the students with comas!" << endl;
-	cout << "Roles:";
+	spaces(20); cout <<YELLOW<< "Please, separate the roles of the students with comas!" << endl;
+	spaces(20); cout << "Roles:";
 	cin.ignore();
 	getline(cin, team.studentRole);
 	string line;

@@ -54,3 +54,8 @@ struct TEACHER
 	string teacherEmail;
 };
 
+#define RESET   "\033[0m"
+#define RED     "\033[1;91m" 
+#define YELLOW  "\033[1;93m"  
+#define PURPLE  "\033[1;95m"
+

@@ -9,7 +9,17 @@
 #include <sstream> 
 #include <conio.h>
 #include <vector>
+#include <chrono>
+#include <thread>
+#include <time.h>
+#include <stdlib.h>
+#include <cctype>
 #include "dataTypes.h"
 using namespace std;
 
-void displayMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team);
+void spaces(unsigned short int n);
+void displayMainMenu();
+void displayShowOptions();
+void displayAddOptions();
+void printSchoolInfo();
+void printMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team);

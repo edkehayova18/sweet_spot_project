@@ -19,5 +19,5 @@ int main()
 	TEACHER teacher; 
 	GUEST guest; 
 	TEAM team;
-	displayMenu(student, teacher, guest, team);
+	printMenu(student, teacher, guest, team);
 }

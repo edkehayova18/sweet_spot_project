@@ -18,3 +18,11 @@ Canko,Ivanov,8A,CIvanov@student.bg
 Viktor,Borisov,8B,VBorisov@student.bg
 Denislav,Krustev,8V,DKrustev@student.bg
 Marina,Kalcheva,8G,MKalcheva@student.bg
+
+Kiril,Pavlov,3V,okok
+
+Lolo,Lolo,10V,olo@lolo.l
+
+Lolo,Lolo,0v,a
+
+Lolo,Lolo,a,

@@ -14,6 +14,7 @@ using namespace std;
 
 void countStudents();
 void countTeachers();
+void countTeams();
 bool isLetters(string input);
 int stringToInt(string str);
 void showAllStudents();
