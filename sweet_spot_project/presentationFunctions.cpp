@@ -215,11 +215,14 @@ void printMenu(STUDENT& student, TEACHER& teacher, GUEST& guest, TEAM& team)
                 addTeacher(teacher);
                 break;
             case 4:
+
                 displayMainMenu();
                 break;
             }
             break;
-        case 4:
+        case 4:     
+            wait();
+            spaces(30); cout << RED << "This option is not available! " << RESET << endl;
             //delete team?
             break;
         case 5:
