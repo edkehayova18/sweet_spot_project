@@ -75,45 +75,45 @@ void printSchoolInfo()
 {
   
     spaces(20);  cout << "_______________________________________________________" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout <<YELLOW<< "||    Here is some information about this school     ||" <<RESET<< endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     schoolInfo();
     spaces(20);  cout << "||     Students: "; countStudents(); cout << "                                  ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout << "||     Teachers: "; countTeachers(); cout<< "                                  ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout << "||     Teams: "; countTeams(); cout<< "                                      ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout << "_______________________________________________________" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
 }
 
 //the main menu
 void displayMainMenu()
 {
     cout << endl;
-    this_thread::sleep_for(chrono::milliseconds(1000));
+    wait(500);
     spaces(20);  cout <<PURPLE<<   "_______________________________________________________" <<RESET<< endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout <<   "||                                                   ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout << YELLOW<<  "||                  _____MENU_____                   ||" << RESET<<endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout <<   "||                                                   ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout <<   "||                    1. Show                        ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout <<   "||                    2. Create team                 ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout <<   "||                    3. Add                         ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout <<   "||                    4. Delete                      ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500)); 
+   wait(); 
     spaces(20);  cout <<   "||                    5. Exit                        ||" << endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     spaces(20);  cout << PURPLE<<  "+_____________________________________________________+" <<RESET<< endl;
-    this_thread::sleep_for(chrono::milliseconds(500));
+   wait();
     cout << endl;
 }
 

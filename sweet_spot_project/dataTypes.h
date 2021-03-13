@@ -9,6 +9,7 @@
 #include <sstream> 
 #include <conio.h>
 #include <vector>
+#include "common.h"
 using namespace std;
 
 struct GUEST
@@ -59,3 +60,4 @@ struct TEACHER
 #define YELLOW  "\033[1;93m"  
 #define PURPLE  "\033[1;95m"
 
+#define ANIMATION_ENABLED true

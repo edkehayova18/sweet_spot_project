@@ -80,7 +80,7 @@ void showAllStudents()
 		{
 			getline(fileForStudents, lineForStudents);
 			spaces(20);  cout << "_______________________________________________________" << endl;
-			this_thread::sleep_for(chrono::milliseconds(500));
+			wait();
 			spaces(20); cout << lineForStudents << endl;
 		}
 		fileForStudents.close();
@@ -103,7 +103,7 @@ void showAllTeams()
 		{
 			getline(file, lineForTeams);
 			spaces(20);  cout << "_________________________________________________________________________" << endl;
-			this_thread::sleep_for(chrono::milliseconds(500));
+			wait();
 			spaces(20);cout << lineForTeams << endl;
 		}
 		file.close();
@@ -126,7 +126,7 @@ void showAllTeachers()
 		{
 			getline(fileForTeachers, lineForTeachers);
 			spaces(20);  cout << "_______________________________________________________" << endl;
-			this_thread::sleep_for(chrono::milliseconds(500));
+			wait();
 			spaces(20);cout << lineForTeachers << endl;
 		}
 		fileForTeachers.close();
@@ -149,7 +149,7 @@ void showAllGuests()
 		{
 			getline(fileForGuests, lineForGuests);
 			spaces(20);  cout << "_______________________________________________________" << endl;
-			this_thread::sleep_for(chrono::milliseconds(500));
+			wait();
 			spaces(20);cout << lineForGuests << endl;
 		}
 		fileForGuests.close();
@@ -172,7 +172,7 @@ void showAllProjects()
 		{
 			getline(fileForProjects, lineForProjects);
 			spaces(20);  cout << "_______________________________________________________" << endl;
-			this_thread::sleep_for(chrono::milliseconds(500));
+			wait();
 			spaces(20);cout << lineForProjects << endl;
 		}
 		fileForProjects.close();
